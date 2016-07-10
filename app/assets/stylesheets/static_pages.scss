@@ -1,23 +1,33 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body > .container {
+	padding-top: 60px;
+}
 h1 {
-	font-family: Calibri;
+	font-size: 20px;
 	font-weight: bold;
 	color: #333333;
-	text-alignment: center;
+	text-align: center;
 }
 
 .feet {
 	background-color: #EEEEEE;
 	color: #999999;
 	padding: 5px;
-	margin-bottom: -142px; 
+	margin-bottom: -142px;
 }
 .container-fluid {
-	width: 70%;
 	margin: auto;
+	width: 70%;
 }
 .p {
 	text-align: justify;
+}
+
+input.form-control {
+	border: 1px solid black;
+}
+textarea.form-control {
+	border: 1px solid black;
 }
