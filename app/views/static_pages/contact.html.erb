@@ -14,28 +14,25 @@
 		</ul>
 	</div>
 
-<form class='col-md-7 col-xs-12' method='post'><input type='hidden' name='form-name' value='form 1' />
-                <div id="form-index">
-                        <div class="form-group column">
-                            <label for="name">Name</label>
-                            <input id="name" class="form-control" type="text" placeholder="John Doe">
-                        </div>
-                        <div class="form-group column">
-                            <label for="phone">Phone Number</label>
-                            <input type="number" id="phone" class="form-control" minlength=10 placeholder="ex. 000-000-0000">
-                        </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input id="email" class="form-control" id="emailaddress" type="email" required placeholder="test@test.com">
-                        <p id="email-blank-val"></p>
-                    </div>
-                    <label for="message">Message *</label>
-                <textarea style="resize:none" class="form-control" cols="40" rows="6" placeholder="Send me a message..." id="message" required="required" minlength=20></textarea>
-                <p id="visible-comment"></p>
-                <p id="char-count"></p>
-                </div>
-                    <div class="center">
-                        <button type="submit" class="btn btn-warning csubmit" id="button">Submit</button>
-                    </div>
-                </div>
-            </form>
+<%= flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you") do %>
+<div class="row">
+	<div class="col-md-5 col-xs-12">
+		<div class="form-group">
+			<%= label_tag :name %>
+			<%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+		</div>
+		<div class="form-group">
+			<%= label_tag :email, "Email Address" %>
+			<%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+		</div>
+		<div class="form-group">
+			<%= label_tag :message %>
+			<%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+		</div>
+	</div>
+</div>
+<%= submit_tag "Send" %>
+<% end %>
+<br>
