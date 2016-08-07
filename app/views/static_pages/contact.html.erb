@@ -1,18 +1,19 @@
 <div class="container-fluid">
 	<h1 class="contact_header">Contact Info</h1>
-	<div class="col-md-5 col-xs-12">
-		<h2>Email</h2>
-		<p>kaylabutler.violin@yahoo.com</p>
+		<div class="contactinfo">
+			<div class="col-md-5 col-xs-12">
+				<h2>Email</h2>
+				<p>kaylabutler.violin@yahoo.com</p>
 
-		<h2>Social Media</h2>
-		<ul>
-		<li>Facebook</li>
-		<li>Instagram</li>
-		<li>Tumblr</li>
-		<li>Pinterest</li>
-		<li>Twitter</li>
-		</ul>
-	</div>
+				<h2>Social Media</h2>
+				<ul>
+				<li>Facebook</li>
+				<li>Instagram</li>
+				<li>Tumblr</li>
+				<li>Pinterest</li>
+				<li>Twitter</li>
+				</ul>
+			</div>
 
 <%= flash[:notice] %>
 
@@ -30,9 +31,10 @@
 		<div class="form-group">
 			<%= label_tag :message %>
 			<%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+			<%= submit_tag "Send" %>
+			</div><!-- /contactinfo -->
 		</div>
 	</div>
 </div>
-<%= submit_tag "Send" %>
 <% end %>
 <br>

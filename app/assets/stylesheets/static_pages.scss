@@ -17,10 +17,6 @@ h1 {
 	padding: 5px;
 	margin-bottom: -142px;
 }
-.container-fluid {
-	margin: auto;
-	width: 70%;
-}
 .p {
 	text-align: justify;
 }
@@ -38,4 +34,39 @@ textarea.form-control {
 }
 .carousel-inner img {
   margin: auto;
+}
+
+
+/* PRODUCTS */
+
+.productslist {
+	margin: auto;
+	width: 80%;
+}
+
+/* CONTACT */
+.contactinfo {
+	margin: auto;
+	width: 80%;
+}
+
+
+/* ABOUT */
+
+.aboutp {
+	margin: auto;
+	width: 50%;
+}
+
+
+/* LOG IN and SIGN IN */
+
+.loginform {
+	nax-width: 300px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.signupform {
+	margin-left: auto;
+	padding: 10px;
 }
