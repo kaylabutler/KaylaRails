@@ -1,29 +1,58 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="row">
+  <div class="col-sm-12 col-md-12">
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <div class="col-sm-12 col-md-12">
+    <div class="productimage">
+      <center><%= image_tag(@product.image_url, width: "400", data_zoom_image: @product.image_url) %></center>
+      </div>
+    </div>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+    <div class="productname">
+      <p>
+        <center><span class="glyphicon glyphicon-heart"></span>
+        <strong><h2>Name:</h2></strong></p>
+        <p><%= @product.name %>
+      </p></center>
+    </div><!-- /productname -->
+  </div><!-- /col-->
+</div>
 
-<p>
-  <strong>Color:</strong>
-  <%= @product.color %>
-</p>
+  <div class="col-sm-12 col-md-12">
+    <div class="productdesc">
+      <p id="pdescription">
+        <strong><center><h1>Description:</h1></strong>
+        <%= @product.description %>
+      </p></center>
+    </div><!-- /productdesc -->
+  </div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+    <div class="col-sm-12 col-md-12">
+      <p>
+        <strong><center><h1>Image url:</h1></strong>
+          <%= @product.image_url %>
+      </p></center>
+    </div>
+
+    <div class="col-sm-12 col-md-12">
+      <div class="productcolor">
+       <p id= "pcolor">
+        <strong><center><h1>Color:</h1></strong>
+        <%= @product.color %>
+      </p></center>
+    </div><!-- productcolor -->
+  </div>
+
+    <div class="col-sm-12 col-md-12">
+      <p>
+        <strong><center><h1>Price:</h1></strong>
+        <%= @product.price %>
+      </p></center>
+    </div><!-- /col -->
+  </div><!-- /row -->
+
+<%= @product.highest_rating_comment %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
