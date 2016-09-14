@@ -2,83 +2,60 @@
 
 <div class="row">
   <div class="col-sm-12 col-md-12">
+  <center><h2><%= @product.name %></h2></center>
+  <br>
 
-  <div class="col-sm-4 col-md-4">
+  <div class="col-sm-4 col-md-6">
     <div class="productimage">
-      <center><%= image_tag(@product.image_url, class: "img-responsive", width: "400", data_zoom_image: @product.image_url) %></center>
+      <center><%= image_tag(@product.image_url, class: "img-responsive", width: "500", data_zoom_image: @product.image_url) %></center>
       </div>
     </div>
-<div class="col-sm-12 col-md-4">
+<div class="col-sm-6 col-md-4">
   <div class="col-sm-12 col md-12">
-    <div class="productname">
-      <p>
-        <center><span class="glyphicon glyphicon-heart"></span>
-        <strong><h1>Name:</h1></strong>
-        <%= @product.name %>
-      </p></center>
-    </div><!-- /productname -->
-  </div><!-- /col-->
+    <ul class="nav nav-tabs">
+      <li class="nav active"><a href="#A" data-toggle="tab">Details</a></li>
+      <li class="nav"><a href="#B" data-toggle="tab">Add Review</a></li>
+      <li class="nav"><a href="#C" data-toggle="tab">Reviews</a></li>
+    </ul>
 
-  <div class="col-sm-12 col-md-12">
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="A">
     <div class="productdesc">
       <p id="pdescription">
-        <strong><center><h1>Description:</h1></strong>
+      <br>
+        <strong>Description:</strong>
         <%= @product.description %>
-      </p></center>
+      </p>
     </div><!-- /productdesc -->
-  </div>
 
-    <div class="col-sm-12 col-md-12">
-      <p>
-        <strong><center><h1>Image url:</h1></strong>
-          <%= @product.image_url %>
-      </p></center>
-    </div>
-
-    <div class="col-sm-12 col-md-12">
-      <div class="productcolor">
-       <p id= "pcolor">
-        <strong><center><h1>Color:</h1></strong>
-        <%= @product.color %>
-      </p></center>
-    </div><!-- productcolor -->
-  </div>
-
-    <div class="col-sm-12 col-md-12">
-      <p>
-        <strong><center><h1>Price:</h1></strong>
+      <p id="productprice">
+        <br>
         $<%= @product.price %>
-      </p></center>
-    </div><!-- /col -->
+      </p>
+
+    <p id="averagerating">
+    <br><br>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
   </div><!-- /row -->
 
-
-<div class="col-sm-12 col-md-4">
+<div class="tab-pane fade" id="B">
   <div class="add-rating">
     <%= render 'new_comment' %>
-  </div><!-- /add-rating -->
-</div><!-- /col-md-4 -->
+    </div>
+  </div>
 
-</div>
-</div>
-
-
-  <hr><br><br>
-  <div class="col-sm-12 col-md-8">
-    <div class="col-sm-12 col-md-12">
-       <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
-      </div>
-  </div><!-- col-md-12-->
-
-    <div class="col-sm-12 col-md-4">
+    <div class="tab-pane fade" id="C">
       <div class="highest-comment">
         <p>  <%= render 'comments' %></p>
+          <%= will_paginate @comments %>
       </div><!-- /highest-comment -->
     </div><!-- /col-md-12 -->
   </div><!-- /col-md-4 -->
 
 
-  <%= will_paginate @comments %>
+       
+      </div>
+    </div>
+  </div><!-- col-md-12-->
 
 <hr><br>
 
