@@ -5,16 +5,16 @@
 
   <div class="col-sm-4 col-md-4">
     <div class="productimage">
-      <center><%= image_tag(@product.image_url, width: "400", data_zoom_image: @product.image_url) %></center>
+      <center><%= image_tag(@product.image_url, class: "img-responsive", width: "400", data_zoom_image: @product.image_url) %></center>
       </div>
     </div>
-<div class="col-sm-12 col-md-8">
+<div class="col-sm-12 col-md-4">
   <div class="col-sm-12 col md-12">
     <div class="productname">
       <p>
         <center><span class="glyphicon glyphicon-heart"></span>
-        <strong><h2>Name:</h2></strong></p>
-        <p><%= @product.name %>
+        <strong><h1>Name:</h1></strong>
+        <%= @product.name %>
       </p></center>
     </div><!-- /productname -->
   </div><!-- /col-->
@@ -47,12 +47,21 @@
     <div class="col-sm-12 col-md-12">
       <p>
         <strong><center><h1>Price:</h1></strong>
-        <%= @product.price %>
+        $<%= @product.price %>
       </p></center>
     </div><!-- /col -->
   </div><!-- /row -->
+
+
+<div class="col-sm-12 col-md-4">
+  <div class="add-rating">
+    <%= render 'new_comment' %>
+  </div><!-- /add-rating -->
+</div><!-- /col-md-4 -->
+
 </div>
 </div>
+
 
   <hr><br><br>
   <div class="col-sm-12 col-md-8">
@@ -63,12 +72,15 @@
 
     <div class="col-sm-12 col-md-4">
       <div class="highest-comment">
-        <p><%= @product.highest_rating_comment %></p>
+        <p>  <%= render 'comments' %></p>
       </div><!-- /highest-comment -->
     </div><!-- /col-md-12 -->
-  </div><!-- /col-md-6 -->
+  </div><!-- /col-md-4 -->
+
+
+  <%= will_paginate @comments %>
 
 <hr><br>
 
-<p><%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %></p>
+<p><center><%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %></center></p>

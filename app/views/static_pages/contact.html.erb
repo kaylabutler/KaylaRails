@@ -1,17 +1,17 @@
 <div class="container-fluid">
 	<h1 class="contact_header">Contact Info</h1>
 		<div class="contactinfo">
-			<div class="col-md-5 col-xs-12">
-				<h2>Email</h2>
-				<p>kaylabutler.violin@yahoo.com</p>
+			<div class="col-md-5 col-xs-7">
+				<center><h2>Email</h2></center>
+				<p class="product-info">kaylabutler.violin@yahoo.com</p>
 
-				<h2>Social Media</h2>
+				<center><h2>Social Media</h2></center>
 				<ul>
-				<li>Facebook</li>
-				<li>Instagram</li>
-				<li>Tumblr</li>
-				<li>Pinterest</li>
-				<li>Twitter</li>
+				<li id="menu-bar">Facebook</li>
+				<li id="menu-bar">Instagram</li>
+				<li id="menu-bar">Tumblr</li>
+				<li id="menu-bar">Pinterest</li>
+				<li id="menu-bar">Twitter</li>
 				</ul>
 			</div>
 
@@ -19,7 +19,7 @@
 
 <%= form_tag("/static_pages/thank_you") do %>
 <div class="row">
-	<div class="col-md-5 col-xs-12">
+	<div class="col-md-6 col-xs-6">
 		<div class="form-group">
 			<%= label_tag :name %>
 			<%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
