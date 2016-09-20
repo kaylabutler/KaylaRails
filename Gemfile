@@ -23,7 +23,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 
-gem 'cancancan'
+gem 'cancancan', '~> 1.10'
 
 gem 'will_paginate', '~> 3.1.0'
 

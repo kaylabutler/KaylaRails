@@ -2,7 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-	font-family: times new roman;
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #fff;
 }
 h1 {
 	font-size: 20px;
@@ -11,12 +12,26 @@ h1 {
 	text-align: center;
 }
 
+b, strong {
+	color: #666666;
+}
+
+.navigate-links {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 14px;
+}
+
 .feet {
 	background-color: #EEEEEE;
 	color: #999999;
 	padding: 5px;
 	margin-bottom: -142px;
 }
+
+h1.title-head {
+	font-size:30px;
+}
+
 .p {
 	text-align: justify;
 }
@@ -28,20 +43,27 @@ textarea.form-control {
 	border: 1px solid black;
 }
 .carousel-caption {
+	background-color: #FFFFFF;
+	opacity: 0.4;
 	color: #000000;
-	font-size: 20px;
-	font-family: Times New Roman;
+	font-size: 30px;
+	font-family: 'Ubuntu', sans-serif;
 }
 .carousel-inner img {
   margin: auto;
 }
 
+ol.carousel-indicators {
+	color: #FF0000;
+}
+
 li#menu-bar {
-	font-family: Times New Roman;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 15px;
 }
 
 a.navbar-brand {
+	font-family: 'Pacifico', cursive;
 	font-size: 24px;
 	font-weight: small-caps;
 }
@@ -55,21 +77,22 @@ a.navbar-brand {
 }
 
 .productname {
+	font-family: 'Pacifico', cursive;
 	font-size: 20px;
 }
 
 .productdesc #pdescription {
-	font-family: Times New Roman;
-	font-size: 16px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 14px;
 }
 
 p#productprice {
-	font-family: Times New Roman;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 17px;
 }
 
 p#averagerating {
-	font-family: Times New Roman;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 16px;
 }
 
@@ -78,8 +101,8 @@ p#averagerating {
 }
 
 p.product-info {
-	font-family: Times New Roman;
-	font-size: 14px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 12px;
 }
 
 /* CONTACT */
@@ -107,4 +130,24 @@ p.product-info {
 .signupform {
 	margin-left: auto;
 	padding: 10px;
+}
+
+
+
+/* LOG IN and SIGN IN */
+
+p.rating-name {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+p.rating-number {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 15px;
+}
+
+p.rating-comments {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
 }

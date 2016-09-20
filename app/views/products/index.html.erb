@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
+<h1 class="title-head">Purchase a Painting</h1>
 
 <div class="container-fluid">
   <div class="row">
@@ -40,4 +40,4 @@
 
 <br>
 
-<center><p><%= link_to 'New Product', new_product_path %></p></center>
+<center><% if user_signed_in? %><p class="navigate-links"><%= link_to 'New Product', new_product_path %></p><% end %></center>

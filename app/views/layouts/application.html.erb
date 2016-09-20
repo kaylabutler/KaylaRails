@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Perfumes for Ruby</title>
+  <title>Painting With Ruby</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Ubuntu" rel="stylesheet">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
@@ -24,7 +26,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/static_pages/index">Kayla's Products</a>
+      <a class="navbar-brand" href="/static_pages/landing_page">Kayla Rails</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -33,21 +35,18 @@
         <li id="menu-bar"><a href="/products">Shop</a></li>
         <li id="menu-bar"><a href="/static_pages/about">About</a></li>
         <li id="menu-bar"><a href="/static_pages/contact">Contact</a></li>
-      </ul>
-      <ul class="nav pull-right">
-        <li>
-        <% if user_signed_in? %>
+        <li id="menu-bar"><% if user_signed_in? %>
           <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
           <% else %>
             <%= link_to('Login', new_user_session_path) %>
           <% end %>
-          </li>
+      </ul>
+      <ul class="nav pull-left">
+       <li id="menu-bar"><%= form_tag("/products", class:"navbar-for navbar-left", role:"search", method: "get") do %>
+          <%= text_field_tag(:q, nil, class:"form-control", placeholder:"Search for...") %>
+        <%= submit_tag("Go") %>
+      <% end %></li>
         </ul>
-      <%= form_tag("/products", method: "get") do %>
-        <%= label_tag(:q, "Search for:") %>
-        <%= text_field_tag(:q) %>
-        <%= submit_tag("Search") %>
-      <% end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
