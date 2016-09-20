@@ -40,4 +40,4 @@
 
 <br>
 
-<center><% if user_signed_in? %><p class="navigate-links"><%= link_to 'New Product', new_product_path %></p><% end %></center>
+<center><% if signed_in? && current_user.admin? %><p class="navigate-links"><%= link_to 'New Product', new_product_path %></p><% end %></center>
