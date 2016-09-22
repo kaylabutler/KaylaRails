@@ -9,7 +9,7 @@
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Pacifico|Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Ubuntu|Pacifico|EB+Garamond" rel="stylesheet">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
@@ -32,19 +32,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li id="menu-bar"><a href="/products">Shop</a></li>
-        <li id="menu-bar"><a href="/static_pages/about">About</a></li>
-        <li id="menu-bar"><a href="/static_pages/contact">Contact</a></li>
+        <li id="menu-bar"><a href="/products">PRODUCTS</a></li>
+        <li id="menu-bar"><a href="/static_pages/about">ABOUT</a></li>
+        <li id="menu-bar"><a href="/static_pages/contact">CONTACT</a></li>
         <li id="menu-bar"><% if user_signed_in? %>
-          <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <%= link_to('LOGOUT', destroy_user_session_path, :method => :delete) %>
           <% else %>
-            <%= link_to('Login', new_user_session_path) %>
+            <%= link_to('LOGIN', new_user_session_path) %>
           <% end %>
       </ul>
       <ul class="nav pull-left">
        <li id="menu-bar"><%= form_tag("/products", class:"navbar-for navbar-left", role:"search", method: "get") do %>
           <%= text_field_tag(:q, nil, class:"form-control", placeholder:"Search for...") %>
-        <%= submit_tag("Go") %>
+        <%= submit_tag("Go", class:"btn btn-default btn-xs") %>
       <% end %></li>
         </ul>
     </div><!-- /.navbar-collapse -->

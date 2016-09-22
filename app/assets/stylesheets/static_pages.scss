@@ -12,6 +12,15 @@ h1 {
 	text-align: center;
 }
 
+a:hover {
+	color: #D971A2;
+	background-color: #FFF;
+}
+
+div.carousel-slide {
+	margin-top: -50px;
+}
+
 b, strong {
 	color: #666666;
 }
@@ -53,19 +62,14 @@ textarea.form-control {
   margin: auto;
 }
 
-ol.carousel-indicators {
-	color: #FF0000;
-}
-
 li#menu-bar {
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'EB Garamond', serif;
 	font-size: 15px;
 }
 
 a.navbar-brand {
 	font-family: 'Pacifico', cursive;
 	font-size: 24px;
-	font-weight: small-caps;
 }
 
 
@@ -76,14 +80,15 @@ a.navbar-brand {
 	width: 80%;
 }
 
-.productname {
-	font-family: 'Pacifico', cursive;
+.product-name {
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 20px;
+	font-weight: bold;
 }
 
 .productdesc #pdescription {
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 14px;
+	font-size: 13px;
 }
 
 p#productprice {
@@ -102,7 +107,16 @@ p#averagerating {
 
 p.product-info {
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 12px;
+	font-size: 14px;
+}
+
+li.nav {
+	font-family: 'EB Garamond', serif;
+	font-size: 14px;
+}
+
+.alignright {
+	float: right;
 }
 
 /* CONTACT */
@@ -111,12 +125,30 @@ p.product-info {
 	width: 80%;
 }
 
+ h2.contact_header {
+	font-size: 30px;
+	font-weight: bold;
+	color: #333333;
+	text-align: center;
+}
+
+p.contact-details {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 14px;
+	text-align: justify;
+}
+
 
 /* ABOUT */
 
 .aboutp {
 	margin: auto;
 	width: 50%;
+}
+
+p.about-text {
+	font-family: 'Ubuntu', sans-serif;
+	text-align: justify;
 }
 
 
@@ -138,16 +170,16 @@ p.product-info {
 
 p.rating-name {
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: bold;
 }
 
 p.rating-number {
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 p.rating-comments {
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 }

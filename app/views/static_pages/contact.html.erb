@@ -1,25 +1,18 @@
 <div class="container-fluid">
-	<h1 class="contact_header">Contact Info</h1>
+	<h2 class="contact_header">Contact Info</h2>
+		<hr>
 		<div class="contactinfo">
-			<div class="col-md-5 col-xs-7">
-				<center><h2>Email</h2></center>
-				<p class="product-info">kaylabutler.violin@yahoo.com</p>
+			<div class="col-md-5 col-xs-12">
+				<p class="contact-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula nibh et pharetra commodo. Donec id feugiat dui, non dignissim ligula. Vestibulum urna magna, ultricies at molestie nec, tempus in massa. Donec eu felis dui. Pellentesque ultrices nunc leo, ut viverra dolor condimentum nec. Duis aliquam in lectus vitae molestie. Suspendisse non semper nibh, in condimentum sem. In hac habitasse platea dictumst. Aliquam et elit in libero condimentum gravida in et justo. Praesent at nibh risus. Curabitur posuere fringilla enim porta suscipit. Donec volutpat scelerisque neque ut ultricies. Aliquam sit amet lacus ut lorem accumsan lacinia.<p>
 
-				<center><h2>Social Media</h2></center>
-				<ul>
-				<li id="menu-bar">Facebook</li>
-				<li id="menu-bar">Instagram</li>
-				<li id="menu-bar">Tumblr</li>
-				<li id="menu-bar">Pinterest</li>
-				<li id="menu-bar">Twitter</li>
-				</ul>
+				<p class="contact-details">Vivamus sit amet urna in nisl sagittis rutrum. Sed accumsan malesuada nunc, in finibus magna eleifend eu. Aliquam diam enim, interdum vel euismod sed, ornare vitae turpis. Donec sagittis dolor nec sem mollis, eget ornare ipsum faucibus. Duis sagittis scelerisque leo, porta finibus lacus euismod vel. Phasellus sed nulla condimentum, aliquet quam sed, gravida leo. Praesent iaculis massa ut tortor dapibus, sed commodo metus elementum. Ut vitae congue risus. Aenean eget elit sit amet lacus consectetur posuere id ut nunc. Pellentesque vitae mi sit amet massa ullamcorper consequat.</p>
 			</div>
 
 <%= flash[:notice] %>
 
 <%= form_tag("/static_pages/thank_you") do %>
 <div class="row">
-	<div class="col-md-6 col-xs-6">
+	<div class="col-md-6 col-xs-12">
 		<div class="form-group">
 			<%= label_tag :name %>
 			<%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
@@ -30,8 +23,8 @@
 		</div>
 		<div class="form-group">
 			<%= label_tag :message %>
-			<%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
-			<%= submit_tag "Send" %>
+			<%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %><br>
+			<%= submit_tag "Send", :class => "btn btn-default" %>
 			</div><!-- /contactinfo -->
 		</div>
 	</div>
