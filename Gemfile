@@ -31,6 +31,10 @@ gem 'rails-controller-testing'
 
 gem 'stripe'
 
+gem 'dotenv-rails', :require => 'dotenv/rails-now'
+
+gem "recaptcha", require: "recaptcha/rails"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
