@@ -14,9 +14,9 @@ $(document).on('ready page:load ajaxSuccess', function() {
 		$('.img-zoom').elevateZoom({
     zoomType: "lens",
     lensShape: "round",
-    lensSize: 200,
-		lensFadeIn: 200,
-		lensFadeOut: 200
+    lensSize: 150,
+		lensFadeIn: 300,
+		lensFadeOut: 400
 	});
 	
 });
