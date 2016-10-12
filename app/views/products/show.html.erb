@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<% cache @product do %>
 <div class="row">
   <div class="col-sm-12 col-md-12">
   <center><h2><b><%= @product.name %></b></h2></center>
@@ -68,6 +69,7 @@
   </div><!-- col-md-12-->
 
 <hr><br>
+<% end %>
 
 <p><center><% if signed_in? && current_user.admin? %><%= link_to 'Edit', edit_product_path(@product) %> |<% end %>
 <%= link_to 'Back', products_path %></center></p>

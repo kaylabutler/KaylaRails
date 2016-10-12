@@ -12,11 +12,11 @@ $(document).on('ready page:load ajaxSuccess', function() {
 	refreshRating();
 
 		$('.img-zoom').elevateZoom({
-    zoomType: "lens",
-    lensShape: "round",
-    lensSize: 150,
-		lensFadeIn: 300,
-		lensFadeOut: 400
-	});
+		    zoomType: "lens",
+		    lensShape: "round",
+		    lensSize: 150,
+			lensFadeIn: 300,
+			lensFadeOut: 400
+		});
 	
 });

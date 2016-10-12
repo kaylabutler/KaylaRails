@@ -33,7 +33,9 @@ gem 'stripe'
 
 gem 'dotenv-rails', :require => 'dotenv/rails-now'
 
-gem "recaptcha", require: "recaptcha/rails"
+gem 'recaptcha', require: 'recaptcha/rails'
+
+gem 'dalli'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
