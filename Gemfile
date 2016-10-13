@@ -37,6 +37,8 @@ gem 'recaptcha', require: 'recaptcha/rails'
 
 gem 'dalli'
 
+gem 'redis-rails', '~> 4'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
