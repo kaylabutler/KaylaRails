@@ -16,7 +16,7 @@ $(document).on('turbolinks:load', function() {
 		    lensShape: "round",
 		    lensSize: 150,
 			lensFadeIn: 300,
-			lensFadeOut: 400
+			lensFadeOut: 100
 		});
 	
 });
