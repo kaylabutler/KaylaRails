@@ -46,7 +46,7 @@
 
 <div class="tab-pane fade" id="B">
   <div class="add-rating">
-    <% if user_signed_in? %>
+    <% if signed_in? %>
       <%= render 'new_comment' %>
     <% else %>
       <%= render 'comment_error' %>
@@ -72,5 +72,5 @@
 <hr><br>
 <% end %>
 
-<p><center><% if signed_in? && current_user.admin? %><%= link_to 'Edit', edit_product_path(@product) %> |<% end %>
+<p><center><% if current_user && current_user.admin? %><%= link_to 'Edit', edit_product_path(@product) %> |<% end %>
 <%= link_to 'Back', products_path %></center></p>
