@@ -45,8 +45,8 @@
       <ul class="nav pull-left">
        <li id="menu-bar"><%= form_tag("/products", class:"navbar-for navbar-left", role:"search", method: "get") do %>
           <%= text_field_tag(:q, nil, class:"form-control", placeholder:"Search for...") %>
-        <%= submit_tag("Go", class:"btn btn-default btn-xs") %>
-      <% end %></li>
+           <%= submit_tag("Go", class:"btn btn-default btn-xs") %>
+          <% end %></li>
         </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
