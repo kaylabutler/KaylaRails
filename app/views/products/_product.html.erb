@@ -1,5 +1,6 @@
-<div class="col-sm-4 col-md-4">
-    <center><tr><%= image_tag(product.image_url, class: "img-responsive") %>
+<% cache product do %>
+  <div class="col-sm-4 col-md-4">
+    <center><tr><%= image_tag(product.image_url, class: "img-responsive", width: "300" ) %>
       <p class="product-name"><%= product.name %></p></center>
       <p class="product-info"><b>Description:</b> <%= product.description %></p>
       <p class="product-info"><b>Color:</b> <%= product.color %></p>
@@ -9,4 +10,4 @@
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td></tr><br>
     </div><!-- /col -->
 
-    <% logger.debug "Product: #{product.name}"%>
+<% end %>
