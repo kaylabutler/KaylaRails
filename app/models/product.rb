@@ -13,4 +13,11 @@ class Product < ActiveRecord::Base
 	def average_rating
 		comments.average(:rating).to_f
 	end
+
+	  after_save :invalidate_cache
+
+  private
+  def invalidate_cache
+     Rails.cache.delete("/users/#{self.id}")
+  end
 end
